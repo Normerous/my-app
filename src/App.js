@@ -27,19 +27,11 @@ class App extends React.Component {
 
   }
   generateTypeA = (number) => {
-    let open = number;
-    let close = number;
+    let num = number;
     let result = '';
-    while (open !== 0 || close !== 0) {
-      if (open >= close && open !== 0) {
-        result = result.concat('(')
-        --open;
-      } else {
-        result = result.concat(')')
-        --close;
-      }
-      if (open < -10 || close < -10)
-        break;
+    while (num > 0) {
+      result = result.concat('()')
+      --num;
     };
     return result;
   }
